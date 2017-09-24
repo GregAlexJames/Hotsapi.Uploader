@@ -31,13 +31,13 @@ assembly_info:
 
 build:
   project: Hotsapi.Uploader.sln
-  verbosity: minimal
+  verbosity: normal
 
 artifacts:
 - path: 'Releases\HotsApiUploaderSetup.exe'
 - path: 'Releases\RELEASES'
 - path: 'Releases\Hotsapi.Uploader-{version}-full.nupkg'
-- path: 'Releases\Hotsapi.Uploader-{version}-delta.nupkg'
+- path: 'Releases\Hotsapi.Uploader-$(version)-delta.nupkg'
 
 deploy:
 - provider: GitHub
