@@ -1,4 +1,4 @@
-version: '1.6.0'
+version: '1.6.{build}'
 image: Visual Studio 2017
 configuration: Release
 install:
@@ -21,6 +21,13 @@ install:
         echo "Downloading $($asset.name)"
         Invoke-WebRequest $asset.browser_download_url -out "$targetDir\$($asset.name)"
     }
+
+assembly_info:
+  patch: true
+  file: Hotsapi.Uploader.Windows\Properties\AssemblyInfo.cs
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 
 build:
   project: Hotsapi.Uploader.sln
