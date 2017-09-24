@@ -33,6 +33,9 @@ build:
   project: Hotsapi.Uploader.sln
   verbosity: minimal
 
+after_build:
+- cmd: dir Releases
+
 artifacts:
 - path: Releases\HotsApiUploaderSetup.exe
 - path: Releases\RELEASES
