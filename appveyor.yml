@@ -1,4 +1,4 @@
-version: '1.6.{build}'
+version: '1.6.0'
 image: Visual Studio 2017
 configuration: Release
 install:
@@ -28,6 +28,9 @@ build:
 
 artifacts:
 - path: Releases\HotsApiUploaderSetup.exe
+- path: Releases\RELEASES
+- path: Releases\Hotsapi.Uploader-{version}-full.nupkg
+- path: Releases\Hotsapi.Uploader-{version}-delta.nupkg
 
 deploy:
 - provider: GitHub
