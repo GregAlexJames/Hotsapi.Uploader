@@ -7,7 +7,7 @@ install:
 - ps: >-
     $repo = 'poma/Hotsapi.Uploader'
 
-    $targetDir = 'RELEASES'
+    $targetDir = 'Releases'
 
     $ProgressPreference = 'SilentlyContinue' # Turning off progress sificantly increases download speed
 
@@ -36,8 +36,8 @@ deploy:
   repository: poma/Hotsapi.Uploader
   artifact: '*'
   draft: true
-#  tag: v${APPVEYOR_REPO_TAG_NAME}
-#  release: v${APPVEYOR_REPO_TAG_NAME}
+#  tag: ${APPVEYOR_REPO_TAG_NAME}
+#  release: ${APPVEYOR_REPO_TAG_NAME}
 #  on:
 #    appveyor_repo_tag: true
 
