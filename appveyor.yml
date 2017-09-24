@@ -37,7 +37,7 @@ after_build:
 - cmd: dir Releases
 
 artifacts:
-  - path: Releases\Hotsapi.Uploader-$(version)-delta.nupkg
+  - path: Releases\Hotsapi.Uploader-$(APPVEYOR_BUILD_VERSION)-delta.nupkg
     name: myapp
   - path: Releases\Hotsapi.Uploader-$(configuration)-delta.nupkg
     name: myapp
