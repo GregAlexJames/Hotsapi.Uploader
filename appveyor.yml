@@ -1,4 +1,4 @@
-version: '1.6.{build}'
+version: 1.6.{build}
 image: Visual Studio 2017
 configuration: Release
 install:
@@ -31,13 +31,13 @@ assembly_info:
 
 build:
   project: Hotsapi.Uploader.sln
-  verbosity: normal
+  verbosity: minimal
 
 artifacts:
-- path: 'Releases\HotsApiUploaderSetup.exe'
-- path: 'Releases\RELEASES'
-- path: 'Releases\Hotsapi.Uploader-{version}-full.nupkg'
-- path: 'Releases\Hotsapi.Uploader-$(version)-delta.nupkg'
+- path: Releases\HotsApiUploaderSetup.exe
+- path: Releases\RELEASES
+- path: Releases\Hotsapi.Uploader-1.6.{build}-full.nupkg
+- path: Releases\Hotsapi.Uploader-1.6.$(build)-delta.nupkg
 
 deploy:
 - provider: GitHub
