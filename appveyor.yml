@@ -38,6 +38,9 @@ after_build:
 
 artifacts:
   - path: Releases\Hotsapi.Uploader-$(version)-delta.nupkg
+    name: myapp
+  - path: Releases\Hotsapi.Uploader-$(configuration)-delta.nupkg
+    name: myapp
   - path: 'Releases\Hotsapi.Uploader-$(version)-delta.nupkg'
   - path: Releases\Hotsapi.Uploader-{version}-delta.nupkg
   - path: 'Releases\Hotsapi.Uploader-{version}-delta.nupkg'
