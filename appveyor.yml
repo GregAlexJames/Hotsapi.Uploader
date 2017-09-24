@@ -37,15 +37,15 @@ after_build:
 - cmd: dir Releases
 
 artifacts:
-- path: Releases\Hotsapi.Uploader-$(version)-delta.nupkg
-- path: 'Releases\Hotsapi.Uploader-$(version)-delta.nupkg'
-- path: Releases\Hotsapi.Uploader-{version}-delta.nupkg
-- path: 'Releases\Hotsapi.Uploader-{version}-delta.nupkg'
+  - path: Releases\Hotsapi.Uploader-$(version)-delta.nupkg
+  - path: 'Releases\Hotsapi.Uploader-$(version)-delta.nupkg'
+  - path: Releases\Hotsapi.Uploader-{version}-delta.nupkg
+  - path: 'Releases\Hotsapi.Uploader-{version}-delta.nupkg'
 
-- path: Releases\HotsApiUploaderSetup.exe
-- path: Releases\RELEASES
-- path: Releases\Hotsapi.Uploader-1.6.44-full.nupkg
-- path: Releases\Hotsapi.Uploader-1.6.$(build)-delta.nupkg
+  - path: Releases\HotsApiUploaderSetup.exe
+  - path: Releases\RELEASES
+  - path: Releases\Hotsapi.Uploader-1.6.44-full.nupkg
+  - path: Releases\Hotsapi.Uploader-1.6.$(build)-delta.nupkg
 
 deploy:
 - provider: GitHub
