@@ -39,7 +39,7 @@ after_build:
 artifacts:
 - path: Releases\HotsApiUploaderSetup.exe
 - path: Releases\RELEASES
-- path: Releases\Hotsapi.Uploader-1.6.{build}-full.nupkg
+- path: Releases\Hotsapi.Uploader-1.6.44-full.nupkg
 - path: Releases\Hotsapi.Uploader-1.6.$(build)-delta.nupkg
 
 deploy:
