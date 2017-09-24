@@ -6,11 +6,17 @@ install:
 - cmd: nuget restore
 - ps: >-
     $repo = 'poma/Hotsapi.Uploader'
+
     $targetDir = 'RELEASES'
+
     $ProgressPreference = 'SilentlyContinue' # Turning off progress sificantly increases download speed
+
     $release = Invoke-WebRequest "https://api.github.com/repos/$repo/releases/latest" | ConvertFrom-Json
+
     md $targetDir -force
+
     foreach ($asset in $release.assets)
+
     {
         echo "Downloading $($asset.name)"
         Invoke-WebRequest $asset.browser_download_url -out "$targetDir\$($asset.name)"
@@ -25,13 +31,15 @@ artifacts:
 
 deploy:
 - provider: GitHub
-  tag: v${APPVEYOR_REPO_TAG_NAME}
-  release: v${APPVEYOR_REPO_TAG_NAME}
   auth_token:
     secure: Hq962a6/5Qpa9d37AJuVplk7sYc4AYRn9b5dg4eLi1jXBkdvbj2zRsG+8r+4nNE3
   repository: poma/Hotsapi.Uploader
   artifact: '*'
   draft: true
+#  tag: v${APPVEYOR_REPO_TAG_NAME}
+#  release: v${APPVEYOR_REPO_TAG_NAME}
+#  on:
+#    appveyor_repo_tag: true
 
 cache:
   - packages -> **\packages.config
